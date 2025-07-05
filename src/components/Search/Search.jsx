@@ -1,9 +1,10 @@
+import { SearchStyled } from "./Search.styles"
 
 function Search() {
     return (
-        <div>
+        <SearchStyled>
             Search
-        </div>
+        </SearchStyled>
     )
 }
 

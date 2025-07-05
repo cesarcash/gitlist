@@ -1,9 +1,10 @@
+import {FiltersStyled} from './Filters.styles'
 
 function Filters() {
     return (
-        <div>
+        <FiltersStyled>
             Filters
-        </div>
+        </FiltersStyled>
     )
 }
 

@@ -1,9 +1,10 @@
+import { RepoListStyled } from "./Repo-list.styles"
 
 function RepoList() {
     return (
-        <div>
+        <RepoListStyled>
             RepoList
-        </div>
+        </RepoListStyled>
     )
 }
 

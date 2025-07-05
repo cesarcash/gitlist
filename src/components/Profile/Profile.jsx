@@ -1,9 +1,10 @@
+import { ProfileStyled } from "./Profile.styles"
 
 function Profile() {
     return (
-        <div>
+        <ProfileStyled>
             Profile
-        </div>
+        </ProfileStyled>
     )
 }
 
