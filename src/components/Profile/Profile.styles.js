@@ -6,22 +6,37 @@ export const ProfileStyled = styled.div`
 
     .avatar {
         border-radius: 50%;
-        border: 1px solid var(--grey-2);
+        border: 1px solid var(--grey-1);
         overflow: hidden;
         box-sizing: border-box;
+        margin-block-end: 1.5rem;
     }
 
     .name {
-        color: var(--white);
+        margin: 0;
         font: var(--headline1);
-        margin-block-start: 1.5rem;
+        color: var(--white);
         margin-block-end: .5rem;
     }
 
     .username {
-        color: var(--grey-2);
+        margin-block-start: .5rem;
+        margin-block-end: 1.5rem;
         font: var(--headline2-ligth);
-        margin: 0;
+    }
+
+    .info {
+        color: var(--grey-1);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin-block: 1rem;
+        font: var(--body2-semi-bold);
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 
     .buttons {
@@ -30,13 +45,8 @@ export const ProfileStyled = styled.div`
         gap: .5rem;
     }
 
-    .info {
-        font: var(--body2-regular);
-        color: var(--grey-2);
-    }
-
-    .bio {
-
+    .stars {
+        margin-block-end: 1.5rem;
     }
 
 `

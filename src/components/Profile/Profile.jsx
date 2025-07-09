@@ -3,7 +3,6 @@ import { ProfileStyled } from "./Profile.styles"
 function Profile() {
     return (
         <ProfileStyled>
-            Profile
             <img src="" className='avatar' width="278" height="278" alt="" />
             <p className="name">Leonidas Esteban</p>
             <p className="username">LeonidasEsteban</p>
