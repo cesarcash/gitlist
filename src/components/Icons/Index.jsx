@@ -12,7 +12,7 @@ import Star from './star';
 import Twitter from './twitter';
 import User from './user';
 
-function Index({name, ...props}) {
+function Index({name, size = 16, color = 'white', ...props}) {
 
     const icons = {
         heart: Heart,
@@ -31,13 +31,7 @@ function Index({name, ...props}) {
     };
 
     const IconComponent = icons[name];
-    return IconComponent ? <IconComponent {...props} /> : null; 
+    return IconComponent ? <IconComponent size={size} color={color} {...props} /> : null; 
 
 }
-
-Index.defaultProps = {
-  size: 16,
-  color: 'white',
-}
-
 export default Index

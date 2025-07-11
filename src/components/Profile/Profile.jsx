@@ -13,7 +13,7 @@ function Profile() {
             <p className="name">{name}</p>
             <p className="username">{login}</p>
             <div className="buttons">
-                <Button text="Follow" link="#" className="custom" icon={<Icon name="twitter" />} />
+                <Button text="Follow" link="#" className="custom" />
                 <Button text="Sponsor" icon={<Icon name="heart" size={24} color="var(--pink)" />} />
             </div>
             <p className="bio info">{bio}</p>

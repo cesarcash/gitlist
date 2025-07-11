@@ -1,9 +1,12 @@
 import {FiltersStyled} from './Filters.styles'
+import Icon from '../Icons';
 
 function Filters() {
     return (
         <FiltersStyled>
-            Filters
+            <Icon name="home" />
+            <Icon name="github" />
+            <Icon name="twitter" />
         </FiltersStyled>
     )
 }

@@ -6,12 +6,23 @@ import Search from '../Search/Search'
 
 function App() {
 
+  const repoList = [
+    {
+        name: 'Mi primer proyecto de React',
+        id: 123
+    },
+    {
+        name: 'Mi segundo proyecto de React',
+        id: 345
+    }
+  ]
+
   return (
 
     <Layout>
       <Profile />
       <Filters />
-      <RepoList />
+      <RepoList repoList={repoList} />
       <Search />
     </Layout>
 
