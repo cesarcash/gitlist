@@ -1,23 +1,29 @@
-import { ProfileStyled } from "./Profile.styles"
+import { ProfileStyled } from "./Profile.styles";
+import Button from "../Button/Button.jsx";
+import props from "../user-data";
+import Icon from "../Icons";
 
 function Profile() {
+
+    const {avatar_url, name, blog, location, bio, twitter_username, followers, following, login} = props;
+
     return (
         <ProfileStyled>
-            <img src="" className='avatar' width="278" height="278" alt="" />
-            <p className="name">Leonidas Esteban</p>
-            <p className="username">LeonidasEsteban</p>
+            <img src={avatar_url} className='avatar' width="278" height="278" alt="" />
+            <p className="name">{name}</p>
+            <p className="username">{login}</p>
             <div className="buttons">
-                <button>follow</button>
-                <button>sponsors</button>
+                <Button text="Follow" link="#" className="custom" icon={<Icon name="twitter" />} />
+                <Button text="Sponsor" icon={<Icon name="heart" size={24} color="var(--pink)" />} />
             </div>
-            <p className="bio info">hola mundo!</p>
-            <p className="follwers info">• 10 <span>followers</span> <span>•</span> 15 <span>following</span></p>
-            <p className="stars info">• 81</p>
-            <p className="location info">• CDMX</p>
-            <a className="info" href="https://leonidasesteban.com" target="_blank" rel="noreferrer">https://leonidasesteban.com</a>
-            <a className="info" href="https://leonidasesteban.com" target="_blank" rel="noreferrer">@LeonidasEsteban</a>
+            <p className="bio info">{bio}</p>
+            <p className="follwers info">• {followers} <span>followers</span> <span>•</span> {following} <span>following</span></p>
+            <p className="location info">• {location}</p>
+            <a className="info" href={blog} target="_blank" rel="noreferrer">{blog}</a>
+            <a className="info" href={`https://twitter.com/twitter_username`} target="_blank" rel="noreferrer">@{twitter_username}</a>
         </ProfileStyled>
     )
+
 }
 
 export default Profile

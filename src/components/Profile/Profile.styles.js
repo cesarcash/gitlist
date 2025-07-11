@@ -4,6 +4,10 @@ export const ProfileStyled = styled.div`
     grid-area: profile;
     /* background-color: #333; */
 
+    .custom {
+        /* border: 5px solid red; */
+    }
+
     .avatar {
         border-radius: 50%;
         border: 1px solid var(--grey-1);
