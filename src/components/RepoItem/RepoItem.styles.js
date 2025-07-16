@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const RepoItemStyled = styled.div`
 
     padding-block: 1rem;
-    border-block-end: 1px solid var(--grey);
+    border-block-end: 1px solid var(--grey-2);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -50,5 +50,26 @@ export const RepoItemStyled = styled.div`
         background: #15223A;
         border-radius: 2rem;
     }
+
+    .details {
+
+        display: flex;
+        gap: 1rem;
+        font: var(--caption-regular);
+
+    }
+
+    .details__item {
+
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        color: var(--grey-1);
+        & span::first-letter {
+            text-transform: uppercase;
+        }
+
+    }
+
 
 ` 

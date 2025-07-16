@@ -1,9 +1,9 @@
 import { ProfileStyled } from "./Profile.styles";
 import Button from "../Button/Button.jsx";
-import props from "../user-data";
+// import props from "../user-data";
 import Icon from "../Icons";
 
-function Profile() {
+function Profile(props) {
 
     const {avatar_url, name, blog, location, bio, twitter_username, followers, following, login} = props;
 
@@ -20,7 +20,9 @@ function Profile() {
             <p className="follwers info">• {followers} <span>followers</span> <span>•</span> {following} <span>following</span></p>
             <p className="location info">• {location}</p>
             <a className="info" href={blog} target="_blank" rel="noreferrer">{blog}</a>
-            <a className="info" href={`https://twitter.com/twitter_username`} target="_blank" rel="noreferrer">@{twitter_username}</a>
+            {
+                twitter_username && <a className="info" href={`https://twitter.com/twitter_username`} target="_blank" rel="noreferrer">@{twitter_username}</a>
+            }            
         </ProfileStyled>
     )
 
