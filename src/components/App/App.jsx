@@ -5,12 +5,14 @@ import Profile from '../Profile/Profile'
 import Filters from '../Filters/Filters'
 import RepoList from '../Repo-list/Repo-list'
 import Search from '../Search/Search'
+import ModalContent from '../Modal/Modal';
 import {getUser, getRepos} from '../../services/users';
 
 function App() {
 
   const [userData, setUserData] = useState({});
   const [repoData, setReposData] = useState([]);
+  const [modal, setModal] = useState(false);
   const params = useParams();
   let user = params.user;
 
@@ -43,10 +45,11 @@ function App() {
   return (
 
     <Layout>
+      <ModalContent isActive={modal} setModal={setModal} />
       <Profile {...userData} />
       <Filters />
       <RepoList repoList={repoData} />
-      <Search />
+      <Search setModal={setModal} />
     </Layout>
 
   );

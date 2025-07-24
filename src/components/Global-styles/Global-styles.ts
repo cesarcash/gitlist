@@ -63,10 +63,10 @@ const GlobalStylesStyled = createGlobalStyle`
     }
 
     body {
+        margin: 0;
         font: var(--body1-regular);
         background-color: var(--bg);
         color: var(--grey);
-        border: 10px solid pink;
     }
 
 `

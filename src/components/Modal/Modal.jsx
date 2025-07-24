@@ -1,4 +1,5 @@
 import {useRef} from 'react'
+import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Overlay from '../Overlay/Overlay';
@@ -27,7 +28,7 @@ const ModalStyled = styled.form`
 
 `
 
-function ModalContent(){
+function ModalContent({isActive, setModal}){
 
     const form = useRef(null);
     const navigate = useNavigate();
@@ -39,17 +40,25 @@ function ModalContent(){
         const username = formData.get('username');
         navigate(`/${username}`)
 
+        setModal(false)
+
     }
 
-    return (
-        <Overlay>
-            <ModalStyled ref={form} onSubmit={handleSubmit}>
-                <h2 className="title">Ingresa usuario</h2>
-                <InputText autoComplete='off' type="text" name="username" placeholder="Username" />
-                <ButtonContrast text="Buscar" />
-            </ModalStyled>
-        </Overlay>
-    );
+    if(isActive){
+        return createPortal(
+            <Overlay>
+                <ModalStyled ref={form} onSubmit={handleSubmit}>
+                    <h2 className="title">Ingresa usuario</h2>
+                    <InputText autoComplete='off' type="text" name="username" placeholder="Username" />
+                    <ButtonContrast text="Buscar" />
+                </ModalStyled>
+            </Overlay>, document.getElementById('modal')
+        );
+    }
+
+    return null;
+
+
 }
 
 export default ModalContent;

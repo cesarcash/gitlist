@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const SearchStyled = styled.div`
 
-    /* grid-area: search; */
+    position: fixed;
+    inset-inline-start: 1.5rem;
+    inset-block-end: 1.5rem;
 
 `;

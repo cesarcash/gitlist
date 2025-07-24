@@ -49,4 +49,16 @@ export const ButtonContrast = styled(Button)`
     }
 `
 
+export const ButtonRounded = styled(Button)`
+    border: 2px solid var(--grey-1);
+    min-inline-size: initial;
+    border-radius: 50%;
+    padding: .75rem;
+    transition: .2s ease-in all;
+    &:hover {
+        background-color: var(--buttonBG);
+        transform: scale(1.1);
+    }
+`
+
 export default Button

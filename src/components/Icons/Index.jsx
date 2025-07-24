@@ -34,4 +34,5 @@ function Index({name, size = 16, color = 'white', ...props}) {
     return IconComponent ? <IconComponent size={size} color={color} {...props} /> : null; 
 
 }
+
 export default Index
