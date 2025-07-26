@@ -13,6 +13,7 @@ function App() {
   const [userData, setUserData] = useState({});
   const [repoData, setReposData] = useState([]);
   const [modal, setModal] = useState(false);
+  const [search, setSearch] = useState('');
   const params = useParams();
   let user = params.user;
 
@@ -47,8 +48,8 @@ function App() {
     <Layout>
       <ModalContent isActive={modal} setModal={setModal} />
       <Profile {...userData} />
-      <Filters />
-      <RepoList repoList={repoData} />
+      <Filters repoListCount={repoData.length} setSearch={setSearch} />
+      <RepoList search={search} repoList={repoData} />
       <Search setModal={setModal} />
     </Layout>
 

@@ -10,9 +10,6 @@ export const RepoItemStyled = styled.div`
     &:last-child {
         border-block-end: none;
     }
-    &:first-child {
-        border-block-start: 1px solid var(--grey);
-    }
 
     .title {
         display: flex;
