@@ -1,6 +1,5 @@
 import { ProfileStyled } from "./Profile.styles";
 import Button from "../Button/Button.jsx";
-// import props from "../user-data";
 import Icon from "../Icons";
 
 function Profile(props) {
