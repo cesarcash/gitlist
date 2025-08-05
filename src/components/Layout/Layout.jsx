@@ -1,9 +1,11 @@
+import { LayoutStyled } from "./Layout.styles"
+
 
 function Layout({children}) {
     return (
-        <div>
+        <LayoutStyled>
             {children}
-        </div>
+        </LayoutStyled>
     )
 }
 

@@ -1,9 +1,17 @@
+import { SearchStyled } from "./Search.styles"
+import Icon from '../Icons/search';
+import {ButtonRounded} from '../Button/Button';
 
-function Search() {
+function Search({setModal}) {
+
+    function handleModal(){
+        setModal(true);
+    }
+
     return (
-        <div>
-            Search
-        </div>
+        <SearchStyled onClick={handleModal}>
+            <ButtonRounded icon={<Icon name="search" size={24} color="var(--white)" />} />
+        </SearchStyled>
     )
 }
 
