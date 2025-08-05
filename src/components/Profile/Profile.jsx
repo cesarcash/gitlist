@@ -1,6 +1,6 @@
 import { ProfileStyled } from "./Profile.styles";
 import Button from "../Button/Button.jsx";
-import Icon from "../Icons";
+import Icon from "../Icons/Index.jsx";
 
 function Profile(props) {
 
