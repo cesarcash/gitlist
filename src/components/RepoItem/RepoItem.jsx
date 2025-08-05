@@ -41,11 +41,11 @@ function RepoItem(props) {
                     props.language ? <Language name={props.language} /> : null
                 }
                 <div className="details__item">
-                    <Icon name="star" />
+                    <Icon name="star" color='var(--icon)' />
                     <span>{props.stargazers_count}</span>
                 </div>
                 <div className="details__item">
-                    <Icon name="branch" />
+                    <Icon name="branch" color='var(--icon)' />
                     <span>{props.forks_count}</span>
                 </div>
                 <div className="details__item">

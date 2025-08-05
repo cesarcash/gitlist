@@ -5,6 +5,7 @@ const OverlayStyled = styled.div`
     position: fixed;
     inset: 0;
     backdrop-filter: blur(10px);
+    background-color: var(--backdrop-color);
 
 `
 

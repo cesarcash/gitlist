@@ -44,7 +44,7 @@ export const RepoItemStyled = styled.div`
         padding-block: .25rem;
         padding-inline: .75rem;
         font: var(--caption-medium);
-        background: #15223A;
+        background: var(--badge);
         border-radius: 2rem;
     }
 

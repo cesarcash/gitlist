@@ -8,11 +8,12 @@ const SelectorStyled = styled.select`
     color: var(--white);
     font: var(--body2-semi-bold);
     border-radius: .5rem;
+    flex: 1;
 `
 
-function Selector({children}) {
+function Selector({children, ...props }) {
     return (
-        <SelectorStyled>
+        <SelectorStyled {...props} >
             {children}
         </SelectorStyled>
     )

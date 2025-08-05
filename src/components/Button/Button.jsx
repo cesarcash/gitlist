@@ -15,6 +15,7 @@ const ButtonStyled = styled.button`
     justify-content: center;
     gap: .5rem;
     min-inline-size: 135px;
+    inline-size: 100%;
     border-radius: .5rem;
     padding-block: .25rem;
     &:hover {
