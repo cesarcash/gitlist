@@ -1,6 +1,6 @@
 import { RepoItemStyled } from "./RepoItem.styles"
 import Language from "../Language/Language"
-import Icon from "../Icons"
+import Icon from "../Icons/Index.jsx"
 
 function RepoItem(props) {
 
